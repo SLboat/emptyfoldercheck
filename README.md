@@ -8,8 +8,8 @@ usage:
  emptyfoldercheck fill: fill the empty folder with .slboat  
  emptyfoldercheck clean: clean all the fill file .slboat  
  
-for easy to use it,you may can use alias for it: 
-alias emptycheck=~/tools/emptycheck.sh
+for easy to use it,you may can use alias for it:  
+alias emptyfolder=$PWD/emptyfolder.sh
 
 example:
 # list empty folder
