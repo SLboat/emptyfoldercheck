@@ -1,5 +1,6 @@
 #!/bin/bash
 # this a small file to make the empty folder clean
+# 01:02 2013-05-15 
 
 # 注意：
 ## 仅仅支持BASH，因为使用了(())运算符
@@ -29,12 +30,13 @@ then
 fi
 if [ $1 = "fill" ]
 then
-	#开始找空目录，检查运行目录
+	# 开始找空目录，检查运行目录
 	empty_folders_count=0
 	# 检查空目录
 	# 约定首行不要太多空格
 	echo "start fill empty folder..."
 	echo
+	# 这里的符号是非常有趣的怪异
 	list=`find . -empty -type d`
 	for empty_folder in $list
 	do
