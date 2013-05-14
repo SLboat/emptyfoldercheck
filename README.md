@@ -4,9 +4,9 @@ A Small Script for check clean fill empty folder
 i use it for s3cmd
 
 usage:
- emptyfoldercheck ls: check the empty folder and list it
- emptyfoldercheck fill: fill the empty folder with .slboat
- emptyfoldercheck clean: clean all the fill file .slboat
+ emptyfoldercheck ls: check the empty folder and list it  
+ emptyfoldercheck fill: fill the empty folder with .slboat  
+ emptyfoldercheck clean: clean all the fill file .slboat  
  
 for easy to use it,you may can use alias for it: 
 alias emptycheck=~/tools/emptycheck.sh
