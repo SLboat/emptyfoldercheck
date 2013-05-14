@@ -115,6 +115,29 @@ then
 	fi
 	echo -e "clean finish"
 	exit 0
+elif [ $1 = "status" ]
+then
+	# 只是检查填充文件
+	fill_folders_count=0
+	echo "start clean all the $FILL_NAME file in: $(pwd)"
+	echo 
+	list=`find . -name $FILL_NAME`
+	for fill_folder in $list
+	do
+		# 严格注意不要发生意外
+		((fill_folders_count++))
+		# 只是打印一下
+		echo $fill_folder
+	done
+	echo
+	if [ $fill_folders_count -eq 0 ]
+	then
+		echo "can't find any $FILL_NAME file"
+	else
+		echo "ther are have $fill_folders_count folder which have $FILL_NAME"
+	fi
+	echo -e "clean finish"
+	exit 0
 else
 	echo "you need chooice a comand"
 	echo "like: ls,fill,clean"
