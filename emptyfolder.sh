@@ -23,7 +23,7 @@ File_Message="it's a file use for slboat by once time:)"
 if [ $# -eq 0 ]
 then
 	echo "you need chooice a comand"
-	echo "like: ls,fill"
+	echo "like: ls,fill,clean"
 	echo
 	exit 1;
 fi
