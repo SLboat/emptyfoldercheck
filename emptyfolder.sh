@@ -1,6 +1,5 @@
 #!/bin/bash
-# this a small file to make the empty folder clean
-# 01:02 2013-05-15 
+# this a small tool to make the empty folder clean
 
 # 注意：
 ## 仅仅支持BASH，因为使用了(())运算符
