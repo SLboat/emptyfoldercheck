@@ -1,6 +1,5 @@
 #!/bin/bash
 # this a small file to make the empty folder clean
-# 01:02 2013-05-15 
 
 # 注意：
 ## 仅仅支持BASH，因为使用了(())运算符
@@ -8,7 +7,7 @@
 # todo: 
 ## 需要指定参数，如果没有参数提示参数列表
 ## 可以检查写入了标记文件，但是已经不是空文件夹的地方
-## 排除目录
+## 排除目录，一个排除数组？在结果里过滤啥子的
 
 # 支持参数为：
 ## check - 检查空目录
@@ -97,10 +96,23 @@ elif [ $1 = "clean" ]
 then
 	# in case you wana delete them all 
 	# plz use this command for this job
+	clean_folders_count=0
 	echo "start clean all the $FILL_NAME file in: $(pwd)"
 	echo 
-	find . -name $FILL_NAME -exec rm -fv {} \;
+	list=`find . -name $FILL_NAME`
+	for fill_folder in $list
+	do
+		# 严格注意不要发生意外
+		((clean_folders_count++))
+		rm -fv $fill_folder
+	done
 	echo
+	if [ $clean_folders_count -eq 0 ]
+	then
+		echo "can't find any $FILL_NAME file"
+	else
+		echo "just clecn $clean_folders_count folder which have $FILL_NAME"
+	fi
 	echo -e "clean finish"
 else
 	echo "you need chooice a comand"
