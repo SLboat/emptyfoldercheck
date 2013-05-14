@@ -1,5 +1,6 @@
 #!/bin/bash
 # this a small file to make the empty folder clean
+# 01:02 2013-05-15 
 
 # 注意：
 ## 仅仅支持BASH，因为使用了(())运算符
@@ -114,6 +115,7 @@ then
 		echo "just clecn $clean_folders_count folder which have $FILL_NAME"
 	fi
 	echo -e "clean finish"
+	exit 0
 else
 	echo "you need chooice a comand"
 	echo "like: ls,fill,clean"
