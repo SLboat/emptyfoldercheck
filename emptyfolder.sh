@@ -119,7 +119,7 @@ elif [ $1 = "status" ]
 then
 	# 只是检查填充文件
 	fill_folders_count=0
-	echo "start clean all the $FILL_NAME file in: $(pwd)"
+	echo "start check all the $FILL_NAME file in: $(pwd)"
 	echo 
 	list=`find . -name $FILL_NAME`
 	for fill_folder in $list
@@ -136,7 +136,7 @@ then
 	else
 		echo "ther are have $fill_folders_count folder which have $FILL_NAME"
 	fi
-	echo -e "clean finish"
+	echo -e "check finish"
 	exit 0
 else
 	echo "you need chooice a comand"
